@@ -12,7 +12,8 @@ def printCool(WhatYouWantToPrint):
 
 def addNo(Var):
     if Var.lower() == "no":
-        NoCounter+=1
+        global NoCounter
+        NoCounter += 1
 
 printCool("Hello There User, You think you are so cool coming here don't you?\nWell lets see about that")
 time.sleep(1)
@@ -38,6 +39,7 @@ addNo(Pet)
 printCool("Now lets go with your Fathers middle name. Just common small talk going on here.")
 FathersMiddleName = input("")
 addNo(FathersMiddleName)
+print(NoCounter)
 
 printCool("While we're on the topic of family, whats your mothers Maiden Name?")
 MothersMaidenName = input("")
@@ -76,6 +78,10 @@ time.sleep(0.5)
 
 printCool("Okay, now lets see if you were dim enough to believe me earlier and you gave me all your accounts, or if you at least have something knocking around in the noggin of yours")
 if NoCounter > 5:
-    printCool("Dannggg, we really got a braniac here, you said no to my inquires {NoCounter} times. I really don't know what to do with you, I guess that I have to leave you here.\nWell then, good bye Mr. Cybersecurity, I guess I won't be taking over all your accounts, which knowing you probably all have different passwords, you're so special.")
+    printCool(f"Dannggg, we really got a braniac here, you said no to my inquires {NoCounter} times. I really don't know what to do with you, I guess that I have to leave you here.\nWell then, good bye Mr. Cybersecurity, I guess I won't be taking over all your accounts, which knowing you probably all have different passwords, you're so special.")
 else:
     printCool("Well, lookie here, you really gave me everything didn't you. If I were'nt just a a python script, you'd be done, identity taken, I could probably become you if I tried hard enough.")
+    if len(SocialCode) == 9:
+        printCool("Jesus, you even gave me your social security code, or gave a random sum of 9 digets but I don't have the clearence to check that, well I guess Ill see you when you are a different person after all your information is stolen by phishing emails.")
+    else:
+        printCool("At least you didn't give me your social security number, that would have been really stupid. Though I wouldn't put it past you to do it sometime in the future.")
